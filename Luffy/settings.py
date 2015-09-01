@@ -20,14 +20,18 @@ IMAGES_STORE = 'pictures'
 
 ITEM_PIPELINES = {
     # 'scrapy.contrib.pipeline.images.ImagesPipeline': 1,
-    'Luffy.pipelines.ArticlePipeline': 2,
+    # 'Luffy.pipelines.OpArticlePipeline': 2,
 }
 
 MONGO_URI = 'mongodb://localhost:27017/'
 MONGO_DATABASE = 'Luffy'
 
 CONCURRENT_REQUESTS=32
-DOWNLOAD_DELAY = 0.5
+
+USER_AGENT = 'Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+
+DOWNLOAD_DELAY = '0.25'
+DEPTH_PRIORITY = 1
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Luffy (+http://www.yourdomain.com)'
